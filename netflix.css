@@ -1,0 +1,330 @@
+﻿/* ------------------------------------------------------------------------------------------
+   NETFLIX CLONE --- CSS
+   ------------------------------------------------------------------------------------------ */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+    --red:#e50914;--red2:#c11119;--bg:#000;--card:#1a1a1a;
+    --gray1:#e5e5e5;--gray2:#b3b3b3;--gray3:#737373;--gray4:#333;
+    --radius:6px;
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter',system-ui,-apple-system,sans-serif;background:var(--bg);color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:var(--gray2);text-decoration:none}a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+button{cursor:pointer;font-family:inherit}
+
+/* --------- NAV --------- */
+.navbar{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 4%;
+    transition:background .3s;
+}
+.navbar.scrolled{background:rgba(0,0,0,.95);backdrop-filter:blur(10px)}
+.netflix-logo{width:148px;height:40px;display:block}
+.brand-logo{display:flex;align-items:center;gap:10px}
+.brand-text{font-size:24px;font-weight:900;color:#fff;letter-spacing:-0.5px;line-height:1}
+.brand-accent{color:#e50914}
+.nav-right{display:flex;align-items:center;gap:14px}
+.lang-wrap{
+    display:flex;align-items:center;gap:4px;
+    background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.35);
+    border-radius:var(--radius);padding:4px 10px;font-size:14px;
+}
+.lang-sel{background:transparent;border:none;color:#fff;font-size:14px;outline:none;appearance:none;cursor:pointer}
+.lang-sel option{background:#111}
+.btn-signin{
+    background:var(--red);color:#fff;padding:6px 16px;font-size:14px;font-weight:600;
+    border-radius:var(--radius);border:none;transition:.2s;display:inline-block;
+}
+.btn-signin:hover{background:var(--red2);text-decoration:none}
+
+/* --------- HERO --------- */
+.hero-section{
+    position:relative;min-height:100vh;display:flex;flex-direction:column;
+    overflow:hidden;
+}
+.hero-bg{
+    position:absolute;inset:0;
+    background:linear-gradient(135deg,#0a0a2e 0%,#1a0a1e 30%,#0d0d0d 60%,#1a0520 100%);
+    z-index:0;
+}
+.hero-gradient{
+    position:absolute;inset:0;z-index:1;
+    background:linear-gradient(to bottom,rgba(0,0,0,.7) 0%,rgba(0,0,0,.3) 30%,rgba(0,0,0,.3) 60%,rgba(0,0,0,.85) 100%);
+}
+.hero-center{
+    position:relative;z-index:2;flex:1;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;padding:120px 5% 60px;max-width:740px;margin:0 auto;
+}
+.hero-center h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:900;line-height:1.1;margin-bottom:16px}
+.hero-p1{font-size:clamp(1.1rem,2.2vw,1.5rem);font-weight:500;margin-bottom:12px}
+.hero-p2{font-size:clamp(.95rem,1.5vw,1.2rem);color:var(--gray1);margin-bottom:24px}
+
+/* --------- EMAIL / FLOAT FIELD --------- */
+.hero-form{display:flex;gap:8px;width:100%;max-width:640px}
+.float-field{flex:1;position:relative}
+.float-field input{
+    width:100%;height:56px;padding:16px 16px 0;font-size:16px;color:#fff;
+    background:rgba(22,22,22,.7);border:1px solid rgba(255,255,255,.35);
+    border-radius:var(--radius);outline:none;transition:.25s;font-family:inherit;
+}
+.float-field input:focus{border-color:#fff;background:rgba(22,22,22,.85)}
+.float-field input.err{border-color:#eb3942}
+.float-field label{
+    position:absolute;left:16px;top:50%;transform:translateY(-50%);
+    font-size:15px;color:var(--gray3);pointer-events:none;
+    transition:.2s cubic-bezier(.4,0,.2,1);
+}
+.float-field input:focus+label,
+.float-field input:not(:placeholder-shown)+label,
+.float-field input.has-val+label{
+    top:8px;transform:translateY(0);font-size:11px;font-weight:600;color:var(--gray2);
+}
+.field-err{font-size:13px;color:#eb3942;min-height:20px;margin-top:4px;text-align:left}
+.btn-red-big{
+    display:flex;align-items:center;gap:4px;flex-shrink:0;
+    background:var(--red);color:#fff;border:none;border-radius:var(--radius);
+    font-size:clamp(1rem,2vw,1.5rem);font-weight:700;padding:0 28px;
+    white-space:nowrap;cursor:pointer;transition:.2s;height:56px;
+}
+.btn-red-big:hover{background:var(--red2)}
+
+/* --------- SEPARATOR --------- */
+.sep{height:8px;background:#232323}
+
+/* --------- SECTIONS --------- */
+.section{padding:50px 4%}
+.dark-section{background:var(--bg)}
+.section-in{max-width:1200px;margin:0 auto}
+.sec-title{font-size:clamp(1.3rem,2.8vw,1.6rem);font-weight:800;margin-bottom:16px}
+
+/* --------- TRENDING --------- */
+.trend-tabs{display:flex;gap:8px;margin-bottom:18px}
+.ttab{
+    display:flex;align-items:center;gap:6px;
+    background:transparent;color:#fff;border:2px solid #fff;
+    border-radius:50px;padding:6px 20px;font-size:14px;font-weight:600;
+    transition:.25s;
+}
+.ttab.active{background:#fff;color:#000}
+.ttab:not(.active):hover{background:rgba(255,255,255,.1)}
+
+.movie-row{
+    display:flex;gap:10px;overflow-x:auto;padding-bottom:20px;
+    scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+}
+.movie-row::-webkit-scrollbar{display:none}
+
+.movie-card{
+    flex:0 0 auto;width:200px;position:relative;border-radius:8px;
+    overflow:hidden;scroll-snap-align:start;cursor:pointer;
+    transition:transform .35s cubic-bezier(.4,0,.2,1),box-shadow .35s;
+    background:var(--card);
+}
+.movie-card:hover{transform:scale(1.06);box-shadow:0 12px 40px rgba(0,0,0,.7);z-index:5}
+.movie-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
+.movie-rank{
+    position:absolute;bottom:-4px;left:4px;
+    font-size:90px;font-weight:900;line-height:.75;
+    color:transparent;-webkit-text-stroke:3px rgba(255,255,255,.7);
+    pointer-events:none;user-select:none;
+}
+.movie-overlay{
+    position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:rgba(0,0,0,.6);opacity:0;transition:opacity .3s;
+}
+.movie-card:hover .movie-overlay{opacity:1}
+.play-icon{
+    width:56px;height:56px;border-radius:50%;border:3px solid #fff;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(0,0,0,.5);transition:transform .2s;
+}
+.play-icon:hover{transform:scale(1.15)}
+.movie-name{
+    position:absolute;bottom:0;left:0;right:0;padding:10px 10px 8px;
+    background:linear-gradient(transparent,rgba(0,0,0,.95));
+    font-size:13px;font-weight:600;text-align:center;
+    pointer-events:none;
+}
+.movie-year{color:var(--gray3);font-weight:400;font-size:11px}
+.movie-hover-title{
+    font-size:14px;font-weight:700;margin-top:10px;
+    text-shadow:0 2px 8px rgba(0,0,0,.8);
+}
+
+/* --------- REASONS GRID --------- */
+.reasons-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:20px}
+.reason-card{
+    background:linear-gradient(149deg,#192247 0%,#210e17 96%);
+    border-radius:16px;padding:24px;min-height:220px;
+    display:flex;flex-direction:column;justify-content:space-between;
+}
+.reason-card h3{font-size:clamp(1.1rem,1.8vw,1.4rem);font-weight:800;margin-bottom:12px}
+.reason-card p{font-size:.9rem;color:var(--gray2);line-height:1.5;flex:1}
+.reason-card svg{width:48px;height:48px;color:var(--red);margin-top:16px;align-self:flex-end}
+
+/* --------- FEATURE ROWS --------- */
+.feat-row{display:flex;align-items:center;gap:48px;max-width:1100px;margin:0 auto}
+.feat-row.reverse{flex-direction:row-reverse}
+.feat-text{flex:1;max-width:520px}
+.feat-text h2{font-size:clamp(1.6rem,3.5vw,3rem);font-weight:900;line-height:1.1;margin-bottom:16px}
+.feat-text p{font-size:clamp(1rem,1.8vw,1.5rem);color:var(--gray1);line-height:1.5}
+.feat-media{flex:1;max-width:550px;position:relative}
+
+/* Feature Illustrations */
+.feat-illustration{max-width:420px;margin:0 auto}
+.feat-illustration svg{width:100%;height:auto}
+
+/* --------- FAQ --------- */
+.faq-sec{text-align:center}
+.faq-title{font-size:clamp(1.5rem,3.5vw,3rem);font-weight:900;margin-bottom:28px}
+.faq-list{max-width:815px;margin:0 auto 40px;text-align:left}
+.faq-item{margin-bottom:8px}
+.faq-q{
+    display:flex;align-items:center;justify-content:space-between;
+    width:100%;padding:20px 24px;
+    background:#2d2d2d;border:none;color:#fff;
+    font-size:clamp(1rem,2vw,1.5rem);font-weight:400;
+    cursor:pointer;transition:background .2s;text-align:left;
+}
+.faq-q:hover{background:#414141}
+.faq-q svg{width:28px;height:28px;flex-shrink:0;transition:transform .3s ease}
+.faq-q.open svg{transform:rotate(45deg)}
+.faq-a{
+    max-height:0;overflow:hidden;
+    transition:max-height .4s ease;
+    background:#2d2d2d;
+}
+.faq-a.open{max-height:500px}
+.faq-a p{
+    padding:20px 24px;font-size:clamp(.9rem,1.5vw,1.2rem);
+    line-height:1.65;color:var(--gray1);border-top:2px solid #141414;
+}
+.faq-cta-text{font-size:clamp(.9rem,1.5vw,1.2rem);margin-bottom:20px}
+.faq-form{max-width:640px;margin:0 auto}
+
+/* --------- FOOTER --------- */
+.site-footer{padding:50px 4% 30px;background:rgba(0,0,0,.8)}
+.footer-in{max-width:1000px;margin:0 auto}
+.footer-q{font-size:16px;color:var(--gray2);margin-bottom:30px}
+.footer-q a{color:var(--gray2);text-decoration:underline}
+.footer-grid{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:28px;
+}
+.footer-grid a{font-size:13px;color:var(--gray2);text-decoration:underline}
+.footer-lang{margin-bottom:24px;display:inline-flex;border-color:rgba(255,255,255,.25)}
+.footer-country{color:var(--gray3);font-size:13px}
+
+/* --------- SIGN-IN MODAL --------- */
+.overlay{
+    position:fixed;inset:0;z-index:200;
+    display:flex;align-items:center;justify-content:center;
+    background:rgba(0,0,0,.7);backdrop-filter:blur(4px);
+    opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;
+}
+.overlay.open{opacity:1;visibility:visible}
+.close-btn{
+    position:absolute;top:14px;right:14px;
+    background:rgba(0,0,0,.5);border:none;border-radius:50%;
+    width:40px;height:40px;display:flex;align-items:center;justify-content:center;
+    cursor:pointer;transition:background .2s;z-index:5;
+}
+.close-btn:hover{background:rgba(255,255,255,.15)}
+.signin-box{
+    background:#000000eb;border-radius:8px;padding:60px 68px 40px;
+    width:100%;max-width:450px;position:relative;
+    transform:translateY(20px);transition:transform .3s;
+}
+.overlay.open .signin-box,.overlay.open .player-box{transform:translateY(0)}
+.signin-box h2{font-size:32px;font-weight:700;margin-bottom:28px}
+.si-field{position:relative;margin-bottom:16px}
+.si-field input{
+    width:100%;padding:24px 16px 8px;font-size:16px;color:#fff;
+    background:#333;border:none;border-bottom:2px solid transparent;
+    border-radius:4px;outline:none;transition:border-color .2s;font-family:inherit;
+}
+.si-field input:focus{border-bottom-color:#e87c03}
+.si-field label{
+    position:absolute;left:16px;top:50%;transform:translateY(-50%);
+    font-size:16px;color:#8c8c8c;pointer-events:none;transition:.15s ease;
+}
+.si-field input:focus+label,.si-field input:not(:placeholder-shown)+label{
+    top:10px;font-size:11px;transform:translateY(0);
+}
+.show-pass{
+    position:absolute;right:12px;top:50%;transform:translateY(-50%);
+    background:none;border:none;color:#8c8c8c;font-size:13px;font-weight:600;cursor:pointer;letter-spacing:.5px;
+}
+.btn-si-submit{
+    width:100%;padding:14px;background:var(--red);color:#fff;font-size:16px;font-weight:700;
+    border-radius:4px;margin-top:24px;border:none;cursor:pointer;transition:background .2s;
+}
+.btn-si-submit:hover{background:var(--red2)}
+.si-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px;font-size:13px;color:var(--gray2)}
+.si-remember{display:flex;align-items:center;gap:4px;cursor:pointer}
+.si-remember input{accent-color:var(--gray2)}
+.si-bottom{margin-top:50px;font-size:16px;color:var(--gray3)}
+.si-bottom a{color:#fff}
+.si-captcha{font-size:13px;margin-top:12px;color:#555}
+
+/* --------- VIDEO PLAYER --------- */
+.player-box{
+    background:#181818;border-radius:12px;overflow:hidden;
+    width:95%;max-width:900px;position:relative;
+    transform:translateY(20px);transition:transform .3s;
+}
+.player-close{position:absolute;top:12px;right:12px;z-index:10}
+.player-wrap{width:100%;aspect-ratio:16/9;background:#000}
+.player-wrap iframe{width:100%;height:100%;border:none}
+.player-info{padding:20px 24px}
+.player-info h3{font-size:1.4rem;font-weight:700;margin-bottom:8px}
+.player-info p{font-size:.95rem;color:var(--gray2);line-height:1.5}
+
+/* --------- TOAST --------- */
+.toast{
+    position:fixed;bottom:40px;left:50%;transform:translateX(-50%) translateY(100px);
+    background:#fff;color:#000;padding:14px 28px;border-radius:8px;
+    font-size:15px;font-weight:600;box-shadow:0 8px 32px rgba(0,0,0,.4);
+    z-index:300;opacity:0;pointer-events:none;white-space:nowrap;
+    transition:transform .4s ease,opacity .4s ease;
+}
+.toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+
+/* --------- RESPONSIVE --------- */
+@media(max-width:1024px){
+    .reasons-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:950px){
+    .feat-row,.feat-row.reverse{flex-direction:column;text-align:center}
+    .feat-text{max-width:100%}
+    .feat-media{max-width:100%}
+    .footer-grid{grid-template-columns:repeat(2,1fr)}
+    .movie-card{width:160px}
+}
+@media(max-width:740px){
+    .navbar{padding:14px 4%}
+    .netflix-logo{width:100px;height:28px}
+    .brand-text{font-size:18px}
+    .hero-center{padding:100px 5% 40px}
+    .hero-form,.faq-form{flex-direction:column;align-items:stretch}
+    .btn-red-big{justify-content:center;height:48px;font-size:1rem}
+    .faq-q{padding:16px;font-size:1rem}
+    .faq-a p{padding:16px;font-size:.95rem}
+    .signin-box{padding:48px 28px 32px;margin:0 16px}
+    .footer-grid{grid-template-columns:1fr 1fr;gap:16px}
+    .movie-card{width:130px}
+    .movie-rank{font-size:60px}
+    .reasons-grid{grid-template-columns:1fr 1fr}
+    .player-box{width:98%;border-radius:8px}
+}
+@media(max-width:500px){
+    .nav-right .lang-wrap{display:none}
+    .footer-grid{grid-template-columns:1fr}
+    .movie-card{width:120px}
+    .movie-rank{font-size:48px}
+    .reasons-grid{grid-template-columns:1fr}
+}
+
