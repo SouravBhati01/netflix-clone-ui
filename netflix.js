@@ -157,8 +157,10 @@
     function renderMovies(r) {
         var list = MOVIES[r] || [];
         movieRow.innerHTML = list.map(function (m, i) {
+            var fallbackPoster = m.yt ? ("https://i.ytimg.com/vi/" + m.yt + "/hqdefault.jpg") : "";
+            var posterUrl = fallbackPoster || m.poster;
             return '<div class="movie-card" data-idx="' + i + '" data-region="' + r + '">' +
-                '<img src="' + m.poster + '" alt="' + m.title + '" loading="lazy" ' +
+                '<img src="' + posterUrl + '" alt="' + m.title + '" loading="lazy" referrerpolicy="no-referrer" ' +
                 'onerror="this.onerror=null;this.src=\'data:image/svg+xml,' +
                 encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="300"><rect width="200" height="300" fill="#222"/><text x="100" y="140" fill="#888" text-anchor="middle" font-size="16" font-family="sans-serif">' + m.title + '</text><text x="100" y="165" fill="#e50914" text-anchor="middle" font-size="13" font-family="sans-serif">(' + m.year + ')</text></svg>') + '\'">' +
                 '<span class="movie-rank">' + (i + 1) + '</span>' +
