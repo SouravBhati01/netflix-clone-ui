@@ -153,24 +153,132 @@
     /* --------- RENDER MOVIE ROW --------- */
     var movieRow = document.getElementById("movie-row");
     var currentRegion = "india";
+    var posterThemes = [
+        ["#e50914", "#111111"],
+        ["#0071eb", "#050b18"],
+        ["#f5b301", "#160d00"],
+        ["#00a884", "#001611"],
+        ["#ff5f57", "#170707"],
+        ["#8e44ad", "#100717"],
+        ["#ff7a00", "#1a0b00"],
+        ["#14b8a6", "#031412"]
+    ];
+
+    function escapeHtml(value) {
+        return String(value).replace(/[&<>"']/g, function (ch) {
+            return {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;"
+            }[ch];
+        });
+    }
+
+    function getPosterTitleLines(title) {
+        var words = String(title).split(" ");
+        var lines = [""];
+        words.forEach(function (word) {
+            var current = lines[lines.length - 1];
+            var next = current ? current + " " + word : word;
+            if (next.length > 17 && lines.length < 3) {
+                lines.push(word);
+            } else {
+                lines[lines.length - 1] = next;
+            }
+        });
+        return lines.map(function (line) {
+            return line.length > 24 ? line.slice(0, 21) + "..." : line;
+        });
+    }
+
+    function makePosterDataUri(movie, index) {
+        var theme = posterThemes[index % posterThemes.length];
+        var safeYear = escapeHtml(movie.year);
+        var titleLines = getPosterTitleLines(movie.title).map(function (line, lineIndex) {
+            return '<text x="200" y="' + (360 + lineIndex * 42) + '" fill="#ffffff" font-size="34" font-weight="800" font-family="Arial, sans-serif" text-anchor="middle">' + escapeHtml(line) + '</text>';
+        }).join("");
+        var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600">' +
+            '<defs>' +
+                '<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">' +
+                    '<stop offset="0" stop-color="' + theme[0] + '"/>' +
+                    '<stop offset="0.48" stop-color="#181818"/>' +
+                    '<stop offset="1" stop-color="' + theme[1] + '"/>' +
+                '</linearGradient>' +
+                '<radialGradient id="glow" cx="50%" cy="36%" r="52%">' +
+                    '<stop offset="0" stop-color="#ffffff" stop-opacity="0.26"/>' +
+                    '<stop offset="1" stop-color="#000000" stop-opacity="0"/>' +
+                '</radialGradient>' +
+            '</defs>' +
+            '<rect width="400" height="600" fill="url(#bg)"/>' +
+            '<rect width="400" height="600" fill="url(#glow)"/>' +
+            '<rect x="26" y="26" width="348" height="548" rx="22" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="2"/>' +
+            '<circle cx="200" cy="216" r="78" fill="#000000" fill-opacity="0.42"/>' +
+            '<path d="M178 168v96l82-48z" fill="#ffffff"/>' +
+            titleLines +
+            '<text x="200" y="490" fill="#ffffff" fill-opacity="0.72" font-size="22" font-family="Arial, sans-serif" text-anchor="middle">' + safeYear + ' Official Trailer</text>' +
+            '<text x="200" y="526" fill="#e50914" font-size="28" font-weight="900" font-family="Arial, sans-serif" text-anchor="middle">STREAMBOX</text>' +
+        '</svg>';
+
+        return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
+    }
+
+    function getRemotePosterSources(movie) {
+        var sources = [];
+        if (movie.yt) {
+            sources.push("https://img.youtube.com/vi/" + movie.yt + "/maxresdefault.jpg");
+            sources.push("https://i.ytimg.com/vi/" + movie.yt + "/sddefault.jpg");
+            sources.push("https://img.youtube.com/vi/" + movie.yt + "/hqdefault.jpg");
+            sources.push("https://i.ytimg.com/vi/" + movie.yt + "/hqdefault.jpg");
+        }
+        if (movie.poster) sources.push(movie.poster);
+        return sources;
+    }
+
+    function getPosterSources(movie, index) {
+        var sources = getRemotePosterSources(movie);
+        sources.push(makePosterDataUri(movie, index));
+        return sources;
+    }
+
+    function loadRemotePoster(img, sources, step) {
+        if (step >= sources.length) return;
+
+        var tester = new Image();
+        tester.referrerPolicy = "no-referrer";
+        tester.onload = function () {
+            img.src = tester.src;
+        };
+        tester.onerror = function () {
+            loadRemotePoster(img, sources, step + 1);
+        };
+        tester.src = sources[step];
+    }
+
+    function wirePosterFallbacks(region) {
+        movieRow.querySelectorAll(".movie-poster").forEach(function (img) {
+            var idx = parseInt(img.dataset.idx, 10);
+            var movie = MOVIES[region][idx];
+            img.src = makePosterDataUri(movie, idx);
+            loadRemotePoster(img, getRemotePosterSources(movie), 0);
+        });
+    }
 
     function renderMovies(r) {
         var list = MOVIES[r] || [];
         movieRow.innerHTML = list.map(function (m, i) {
-            var fallbackPoster = m.yt ? ("https://i.ytimg.com/vi/" + m.yt + "/hqdefault.jpg") : "";
-            var posterUrl = fallbackPoster || m.poster;
             return '<div class="movie-card" data-idx="' + i + '" data-region="' + r + '">' +
-                '<img src="' + posterUrl + '" alt="' + m.title + '" loading="lazy" referrerpolicy="no-referrer" ' +
-                'onerror="this.onerror=null;this.src=\'data:image/svg+xml,' +
-                encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="200" height="300"><rect width="200" height="300" fill="#222"/><text x="100" y="140" fill="#888" text-anchor="middle" font-size="16" font-family="sans-serif">' + m.title + '</text><text x="100" y="165" fill="#e50914" text-anchor="middle" font-size="13" font-family="sans-serif">(' + m.year + ')</text></svg>') + '\'">' +
+                '<img class="movie-poster" data-idx="' + i + '" alt="' + escapeHtml(m.title) + '" loading="lazy" referrerpolicy="no-referrer">' +
                 '<span class="movie-rank">' + (i + 1) + '</span>' +
                 '<div class="movie-overlay">' +
                     '<div class="play-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>' +
-                    '<span class="movie-hover-title">' + m.title + '</span>' +
+                    '<span class="movie-hover-title">' + escapeHtml(m.title) + '</span>' +
                 '</div>' +
-                '<div class="movie-name">' + m.title + ' <span class="movie-year">(' + m.year + ')</span></div>' +
+                '<div class="movie-name">' + escapeHtml(m.title) + ' <span class="movie-year">(' + escapeHtml(m.year) + ')</span></div>' +
                 '</div>';
         }).join("");
+        wirePosterFallbacks(r);
     }
 
     renderMovies(currentRegion);
@@ -208,6 +316,7 @@
 
         playerTitle.textContent = m.title + " (" + m.year + ")";
         playerDesc.textContent = m.desc;
+        playerWrap.style.backgroundImage = "url('" + makePosterDataUri(m, idx) + "')";
 
         // Embed YouTube player with autoplay
         playerWrap.innerHTML =

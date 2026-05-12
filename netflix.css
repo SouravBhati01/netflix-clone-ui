@@ -23,7 +23,7 @@ button{cursor:pointer;font-family:inherit}
 .navbar.scrolled{background:rgba(0,0,0,.95);backdrop-filter:blur(10px)}
 .netflix-logo{width:148px;height:40px;display:block}
 .brand-logo{display:flex;align-items:center;gap:10px}
-.brand-text{font-size:24px;font-weight:900;color:#fff;letter-spacing:-0.5px;line-height:1}
+.brand-text{font-size:24px;font-weight:900;color:#fff;letter-spacing:0;line-height:1}
 .brand-accent{color:#e50914}
 .nav-right{display:flex;align-items:center;gap:14px}
 .lang-wrap{
@@ -125,7 +125,10 @@ button{cursor:pointer;font-family:inherit}
     background:var(--card);
 }
 .movie-card:hover{transform:scale(1.06);box-shadow:0 12px 40px rgba(0,0,0,.7);z-index:5}
-.movie-card img{width:100%;aspect-ratio:2/3;object-fit:cover;display:block}
+.movie-card img{
+    width:100%;aspect-ratio:2/3;object-fit:cover;display:block;
+    background:linear-gradient(145deg,#241111,#090909 55%,#180406);
+}
 .movie-rank{
     position:absolute;bottom:-4px;left:4px;
     font-size:90px;font-weight:900;line-height:.75;
@@ -277,7 +280,15 @@ button{cursor:pointer;font-family:inherit}
     transform:translateY(20px);transition:transform .3s;
 }
 .player-close{position:absolute;top:12px;right:12px;z-index:10}
-.player-wrap{width:100%;aspect-ratio:16/9;background:#000}
+.player-wrap{
+    width:100%;aspect-ratio:16/9;background:#000 center/cover no-repeat;
+    position:relative;
+}
+.player-wrap::before{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.55));
+    pointer-events:none;
+}
 .player-wrap iframe{width:100%;height:100%;border:none}
 .player-info{padding:20px 24px}
 .player-info h3{font-size:1.4rem;font-weight:700;margin-bottom:8px}
