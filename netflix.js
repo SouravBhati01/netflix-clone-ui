@@ -9,70 +9,70 @@
                 title: "Jawan",
                 year: "2023",
                 desc: "A man is driven by a personal vendetta to rectify the wrongs in society while fighting a threat.",
-                poster: "assets/posters/jawan.svg",
+                poster: "assets/posters-real/jawan.jpg",
                 yt: "COv52Qyitws"
             },
             {
                 title: "Pathaan",
                 year: "2023",
                 desc: "An Indian spy takes on a group of mercenaries who have nefarious plans to destroy India.",
-                poster: "assets/posters/pathaan.svg",
+                poster: "assets/posters-real/pathaan.jpg",
                 yt: "vqu4z34wENw"
             },
             {
                 title: "Animal",
                 year: "2023",
                 desc: "A son shares a troubled relationship with his father and goes on a mission of revenge.",
-                poster: "assets/posters/animal.svg",
+                poster: "assets/posters-real/animal.jpg",
                 yt: "sR0SDT2GeFg"
             },
             {
                 title: "RRR",
                 year: "2022",
                 desc: "Two legendary Indian revolutionaries embark on a journey before they start fighting for their country.",
-                poster: "assets/posters/rrr.svg",
+                poster: "assets/posters-real/rrr.jpg",
                 yt: "f_vbAtFSEc0"
             },
             {
                 title: "12th Fail",
                 year: "2023",
                 desc: "A boy from a small village dreams of becoming an IPS officer. Based on a true story.",
-                poster: "assets/posters/12th-fail.svg",
+                poster: "assets/posters-real/12th-fail.jpg",
                 yt: "iG1CV9FjVkQ"
             },
             {
                 title: "KGF Chapter 2",
                 year: "2022",
                 desc: "Rocky takes his place at the top but enemies seek to destroy everything he has built.",
-                poster: "assets/posters/kgf-chapter-2.svg",
+                poster: "assets/posters-real/kgf-chapter-2.jpg",
                 yt: "JKa05nyUmuQ"
             },
             {
                 title: "Stree 2",
                 year: "2024",
                 desc: "The haunted town of Chanderi faces a new supernatural threat in this horror comedy sequel.",
-                poster: "assets/posters/stree-2.svg",
+                poster: "assets/posters-real/stree-2.jpg",
                 yt: "KMy1zO8m8sM"
             },
             {
                 title: "Pushpa: The Rise",
                 year: "2021",
                 desc: "A laborer rises through the ranks of a red sandalwood smuggling syndicate.",
-                poster: "assets/posters/pushpa-the-rise.svg",
+                poster: "assets/posters-real/pushpa-the-rise.jpg",
                 yt: "Q1NKMPhP8PY"
             },
             {
                 title: "Dangal",
                 year: "2016",
                 desc: "Former wrestler Mahavir Singh Phogat trains his daughters to become world-class wrestlers.",
-                poster: "assets/posters/dangal.svg",
+                poster: "assets/posters-real/dangal.jpg",
                 yt: "x_7YlGv9u1g"
             },
             {
                 title: "Bajrangi Bhaijaan",
                 year: "2015",
                 desc: "An Indian man with a big heart undertakes the task of reuniting a young Pakistani girl with her family.",
-                poster: "assets/posters/bajrangi-bhaijaan.svg",
+                poster: "assets/posters-real/bajrangi-bhaijaan.jpg",
                 yt: "4nwAra0mz_Q"
             }
         ],
@@ -81,70 +81,70 @@
                 title: "Oppenheimer",
                 year: "2023",
                 desc: "The story of J. Robert Oppenheimer and his role in the development of the atomic bomb.",
-                poster: "assets/posters/oppenheimer.svg",
+                poster: "assets/posters-real/oppenheimer.jpg",
                 yt: "uYPbbksJxIg"
             },
             {
                 title: "Barbie",
                 year: "2023",
                 desc: "Barbie and Ken leave Barbie Land on an adventure in the real world and discover themselves.",
-                poster: "assets/posters/barbie.svg",
+                poster: "assets/posters-real/barbie.jpg",
                 yt: "pBk4NYhWNMM"
             },
             {
                 title: "Dune: Part Two",
                 year: "2024",
                 desc: "Paul Atreides unites with the Fremen on a warpath of revenge against those who destroyed his family.",
-                poster: "assets/posters/dune-part-two.svg",
+                poster: "assets/posters-real/dune-part-two.jpg",
                 yt: "Way9Dexny3w"
             },
             {
                 title: "Spider-Man: No Way Home",
                 year: "2021",
                 desc: "Spider-Man asks Doctor Strange for help, but a spell gone wrong unleashes multiverse villains.",
-                poster: "assets/posters/spider-man-no-way-home.svg",
+                poster: "assets/posters-real/spider-man-no-way-home.jpg",
                 yt: "JfVOs4VSpmA"
             },
             {
                 title: "Top Gun: Maverick",
                 year: "2022",
                 desc: "Maverick confronts his past while training a new generation of Top Gun graduates.",
-                poster: "assets/posters/top-gun-maverick.svg",
+                poster: "assets/posters-real/top-gun-maverick.jpg",
                 yt: "giXco2jaZ_4"
             },
             {
                 title: "The Batman",
                 year: "2022",
                 desc: "Batman investigates corruption in Gotham City when a sadistic serial killer targets political figures.",
-                poster: "assets/posters/the-batman.svg",
+                poster: "assets/posters-real/the-batman.jpg",
                 yt: "mqqft2x_Aa4"
             },
             {
                 title: "Avatar: The Way of Water",
                 year: "2022",
                 desc: "Jake Sully and his family face a renewed threat and must protect Pandora.",
-                poster: "assets/posters/avatar-the-way-of-water.svg",
+                poster: "assets/posters-real/avatar-the-way-of-water.jpg",
                 yt: "d9MyW72ELq0"
             },
             {
                 title: "John Wick: Chapter 4",
                 year: "2023",
                 desc: "John Wick uncovers a path to defeating the High Table but faces a powerful new enemy.",
-                poster: "assets/posters/john-wick-chapter-4.svg",
+                poster: "assets/posters-real/john-wick-chapter-4.jpg",
                 yt: "qEVUtrk8_B4"
             },
             {
                 title: "Inside Out 2",
                 year: "2024",
                 desc: "Riley enters puberty and encounters brand-new emotions that shake up her inner world.",
-                poster: "assets/posters/inside-out-2.svg",
+                poster: "assets/posters-real/inside-out-2.jpg",
                 yt: "LEjhY15eCx0"
             },
             {
                 title: "Everything Everywhere All at Once",
                 year: "2022",
                 desc: "A Chinese-American woman gets swept up in an insane adventure through the multiverse.",
-                poster: "assets/posters/everything-everywhere-all-at-once.svg",
+                poster: "assets/posters-real/everything-everywhere-all-at-once.jpg",
                 yt: "wxN1T1qdqzk"
             }
         ]
@@ -472,4 +472,5 @@
         revealEls.forEach(function (el) { obs.observe(el); });
     }
 });
+
 
