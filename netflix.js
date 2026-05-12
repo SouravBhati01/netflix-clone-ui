@@ -9,70 +9,70 @@
                 title: "Jawan",
                 year: "2023",
                 desc: "A man is driven by a personal vendetta to rectify the wrongs in society while fighting a threat.",
-                poster: "https://m.media-amazon.com/images/M/MV5BNzE2NTIwMjEtZjYyMi00NjEzLWE4OTYtYTRlYjMzYjFhZDIyXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/jawan.svg",
                 yt: "COv52Qyitws"
             },
             {
                 title: "Pathaan",
                 year: "2023",
                 desc: "An Indian spy takes on a group of mercenaries who have nefarious plans to destroy India.",
-                poster: "https://m.media-amazon.com/images/M/MV5BM2E3ZjJhOTQtYjUzMi00NmVhLTg5MWItMTFiYmNlOTczNjYyXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/pathaan.svg",
                 yt: "vqu4z34wENw"
             },
             {
                 title: "Animal",
                 year: "2023",
                 desc: "A son shares a troubled relationship with his father and goes on a mission of revenge.",
-                poster: "https://m.media-amazon.com/images/M/MV5BNGViMGMwOGEtNGM0Yi00M2Y2LWJhMzUtYTU0NjcxYjVmMjBkXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/animal.svg",
                 yt: "sR0SDT2GeFg"
             },
             {
                 title: "RRR",
                 year: "2022",
                 desc: "Two legendary Indian revolutionaries embark on a journey before they start fighting for their country.",
-                poster: "https://m.media-amazon.com/images/M/MV5BNjk4NTMzNDEtNmQwNy00YjYwLTlkZmQtYzBiNmEzNDIyMjA4XkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/rrr.svg",
                 yt: "f_vbAtFSEc0"
             },
             {
                 title: "12th Fail",
                 year: "2023",
                 desc: "A boy from a small village dreams of becoming an IPS officer. Based on a true story.",
-                poster: "https://m.media-amazon.com/images/M/MV5BYjhmODdhZDItNjAzZC00YzlhLThhMjgtOWIyOGE3OWQ3OTdhXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/12th-fail.svg",
                 yt: "iG1CV9FjVkQ"
             },
             {
                 title: "KGF Chapter 2",
                 year: "2022",
                 desc: "Rocky takes his place at the top but enemies seek to destroy everything he has built.",
-                poster: "https://m.media-amazon.com/images/M/MV5BMjMwMDgyOGQtMDYzMC00OTU4LTkwNjUtNWNjYzVlMjY0ZmVhXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/kgf-chapter-2.svg",
                 yt: "JKa05nyUmuQ"
             },
             {
                 title: "Stree 2",
                 year: "2024",
                 desc: "The haunted town of Chanderi faces a new supernatural threat in this horror comedy sequel.",
-                poster: "https://m.media-amazon.com/images/M/MV5BYzFkMjFkYjQtMmY1NS00MjU0LThiMDAtMTdjZjQ5ZTA3ZGQ0XkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/stree-2.svg",
                 yt: "KMy1zO8m8sM"
             },
             {
                 title: "Pushpa: The Rise",
                 year: "2021",
                 desc: "A laborer rises through the ranks of a red sandalwood smuggling syndicate.",
-                poster: "https://m.media-amazon.com/images/M/MV5BMmQ4YmM4YTctMWE0MC00MjhhLTg3ZmUtYjRhNmFiNjkzNjJhXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/pushpa-the-rise.svg",
                 yt: "Q1NKMPhP8PY"
             },
             {
                 title: "Dangal",
                 year: "2016",
                 desc: "Former wrestler Mahavir Singh Phogat trains his daughters to become world-class wrestlers.",
-                poster: "https://m.media-amazon.com/images/M/MV5BMTQ4MzQzMzM2Nl5BMl5BanBnXkFtZTgwMTQ1NzU3MDI@._V1_SX300.jpg",
+                poster: "assets/posters/dangal.svg",
                 yt: "x_7YlGv9u1g"
             },
             {
                 title: "Bajrangi Bhaijaan",
                 year: "2015",
                 desc: "An Indian man with a big heart undertakes the task of reuniting a young Pakistani girl with her family.",
-                poster: "https://m.media-amazon.com/images/M/MV5BMjE1NjQ5ODc2NV5BMl5BanBnXkFtZTgwOTM5OTI2NTE@._V1_SX300.jpg",
+                poster: "assets/posters/bajrangi-bhaijaan.svg",
                 yt: "4nwAra0mz_Q"
             }
         ],
@@ -81,70 +81,70 @@
                 title: "Oppenheimer",
                 year: "2023",
                 desc: "The story of J. Robert Oppenheimer and his role in the development of the atomic bomb.",
-                poster: "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZjUtYTg0ZTkwNTNlNGY3XkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/oppenheimer.svg",
                 yt: "uYPbbksJxIg"
             },
             {
                 title: "Barbie",
                 year: "2023",
                 desc: "Barbie and Ken leave Barbie Land on an adventure in the real world and discover themselves.",
-                poster: "https://m.media-amazon.com/images/M/MV5BYjI3NDk0ZGUtYjFhOS00Y2I0LTg5NTAtYzNjYjcyMTZlYzVmXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/barbie.svg",
                 yt: "pBk4NYhWNMM"
             },
             {
                 title: "Dune: Part Two",
                 year: "2024",
                 desc: "Paul Atreides unites with the Fremen on a warpath of revenge against those who destroyed his family.",
-                poster: "https://m.media-amazon.com/images/M/MV5BN2QyZGU4ZDctOWMzMy00NTc5LThlOGQtODhmNDI1NmY5YzAwXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/dune-part-two.svg",
                 yt: "Way9Dexny3w"
             },
             {
                 title: "Spider-Man: No Way Home",
                 year: "2021",
                 desc: "Spider-Man asks Doctor Strange for help, but a spell gone wrong unleashes multiverse villains.",
-                poster: "https://m.media-amazon.com/images/M/MV5BMmFiZGZjMmEtMTA0Ni00MzA2LTljMTYtZGI2MGJmZWYzZTQ2XkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/spider-man-no-way-home.svg",
                 yt: "JfVOs4VSpmA"
             },
             {
                 title: "Top Gun: Maverick",
                 year: "2022",
                 desc: "Maverick confronts his past while training a new generation of Top Gun graduates.",
-                poster: "https://m.media-amazon.com/images/M/MV5BYzBkOGRlNDItMmIzOS00MDk4LTliNDAtNmNlMzU3OGZhNTBkXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/top-gun-maverick.svg",
                 yt: "giXco2jaZ_4"
             },
             {
                 title: "The Batman",
                 year: "2022",
                 desc: "Batman investigates corruption in Gotham City when a sadistic serial killer targets political figures.",
-                poster: "https://m.media-amazon.com/images/M/MV5BMmU5NGJlMzAtMGNmOC00YjJjLTgyMzUtNjAyYmE4Njg5YWMyXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/the-batman.svg",
                 yt: "mqqft2x_Aa4"
             },
             {
                 title: "Avatar: The Way of Water",
                 year: "2022",
                 desc: "Jake Sully and his family face a renewed threat and must protect Pandora.",
-                poster: "https://m.media-amazon.com/images/M/MV5BNzM1YjhkOGItOTE0Yy00YTViLThmMGEtZGJhZTRmOGUxNmI0XkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/avatar-the-way-of-water.svg",
                 yt: "d9MyW72ELq0"
             },
             {
                 title: "John Wick: Chapter 4",
                 year: "2023",
                 desc: "John Wick uncovers a path to defeating the High Table but faces a powerful new enemy.",
-                poster: "https://m.media-amazon.com/images/M/MV5BMDExZGMyOTMtNDgxYi00NjM1LWEyZjctYTRmMTMyMzUzMTQ1XkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/john-wick-chapter-4.svg",
                 yt: "qEVUtrk8_B4"
             },
             {
                 title: "Inside Out 2",
                 year: "2024",
                 desc: "Riley enters puberty and encounters brand-new emotions that shake up her inner world.",
-                poster: "https://m.media-amazon.com/images/M/MV5BYTc1MDQ3NjAtOWEzMi00YzE1LWI2OWEtZmFkMTVlOGE4YzNjXkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/inside-out-2.svg",
                 yt: "LEjhY15eCx0"
             },
             {
                 title: "Everything Everywhere All at Once",
                 year: "2022",
                 desc: "A Chinese-American woman gets swept up in an insane adventure through the multiverse.",
-                poster: "https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGc@._V1_SX300.jpg",
+                poster: "assets/posters/everything-everywhere-all-at-once.svg",
                 yt: "wxN1T1qdqzk"
             }
         ]
@@ -224,44 +224,15 @@
         return "data:image/svg+xml;charset=UTF-8," + encodeURIComponent(svg);
     }
 
-    function getRemotePosterSources(movie) {
-        var sources = [];
-        if (movie.yt) {
-            sources.push("https://img.youtube.com/vi/" + movie.yt + "/maxresdefault.jpg");
-            sources.push("https://i.ytimg.com/vi/" + movie.yt + "/sddefault.jpg");
-            sources.push("https://img.youtube.com/vi/" + movie.yt + "/hqdefault.jpg");
-            sources.push("https://i.ytimg.com/vi/" + movie.yt + "/hqdefault.jpg");
-        }
-        if (movie.poster) sources.push(movie.poster);
-        return sources;
-    }
-
-    function getPosterSources(movie, index) {
-        var sources = getRemotePosterSources(movie);
-        sources.push(makePosterDataUri(movie, index));
-        return sources;
-    }
-
-    function loadRemotePoster(img, sources, step) {
-        if (step >= sources.length) return;
-
-        var tester = new Image();
-        tester.referrerPolicy = "no-referrer";
-        tester.onload = function () {
-            img.src = tester.src;
-        };
-        tester.onerror = function () {
-            loadRemotePoster(img, sources, step + 1);
-        };
-        tester.src = sources[step];
-    }
-
     function wirePosterFallbacks(region) {
         movieRow.querySelectorAll(".movie-poster").forEach(function (img) {
             var idx = parseInt(img.dataset.idx, 10);
             var movie = MOVIES[region][idx];
-            img.src = makePosterDataUri(movie, idx);
-            loadRemotePoster(img, getRemotePosterSources(movie), 0);
+            img.onerror = function () {
+                img.onerror = null;
+                img.src = makePosterDataUri(movie, idx);
+            };
+            img.src = movie.poster || makePosterDataUri(movie, idx);
         });
     }
 
@@ -316,7 +287,7 @@
 
         playerTitle.textContent = m.title + " (" + m.year + ")";
         playerDesc.textContent = m.desc;
-        playerWrap.style.backgroundImage = "url('" + makePosterDataUri(m, idx) + "')";
+        playerWrap.style.backgroundImage = "url('" + (m.poster || makePosterDataUri(m, idx)) + "')";
 
         // Embed YouTube player with autoplay
         playerWrap.innerHTML =
